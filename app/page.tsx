@@ -1,5 +1,9 @@
 import Image from "next/image"
 
+import { SocialLinks } from "@/components/social-links"
+import { EducationList } from "@/components/education-list"
+import { ExperienceList } from "@/components/experience-list"
+
 function Section({
   id,
   title,
@@ -13,7 +17,7 @@ function Section({
     <section id={id} className="scroll-mt-14 py-24">
       <div className="mx-auto max-w-5xl px-4">
         <div className="mb-16 flex items-center gap-4">
-          <span className="text-xs font-medium tracking-[0.25em] text-primary uppercase">
+          <span className="text-sm font-medium tracking-[0.25em] text-primary uppercase">
             {title}
           </span>
           <div className="h-px flex-1 bg-primary/[0.125]" />
@@ -40,6 +44,8 @@ export default function Home() {
             I’m Zahid, a Software Engineer currently developing software in the telecom industry, with a passion for building reliable, scalable, and meaningful digital solutions.
             I enjoy exploring modern technologies, solving complex problems, and continuously improving my craft, while developing a growing interest in Data Science and its applications to real-world problems.
           </p>
+
+          <SocialLinks />
         </div>
 
         <div className="flex justify-center md:justify-end">
@@ -61,11 +67,11 @@ export default function Home() {
       </section>
 
       <Section id="education" title="Education">
-        Add your education history here.
+        <EducationList />
       </Section>
 
       <Section id="experience" title="Work Experience">
-        Add your work experience here.
+        <ExperienceList />
       </Section>
 
       <Section id="projects" title="Projects">
