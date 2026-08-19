@@ -21,6 +21,7 @@ import { cn } from "@/lib/utils"
 const SHORT_NAME = "Zahid"
 
 const NAV_ITEMS = [
+  { label: "Home", href: "#top" },
   { label: "Education", href: "#education" },
   { label: "Work Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
