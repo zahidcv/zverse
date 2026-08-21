@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge"
 import { EXPERIENCE } from "@/data/experience"
 
 export function ExperienceList() {

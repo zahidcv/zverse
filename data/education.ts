@@ -21,7 +21,7 @@ export const EDUCATION: EducationEntry[] = [
       "Hajee Mohammad Danesh Science and Technology University (HSTU)",
     location: "Dinajpur, Bangladesh",
     date: "Jan 2018 - Dec 2021",
-    description: "Result published in 29 November 2023",
+    description: "Result published in 29 November 2023 due to COVID-19 pandemic-related session jams.",
     homepageUrl: "https://www.hstu.ac.bd/",
   },
   {
