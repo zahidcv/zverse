@@ -4,6 +4,7 @@ import headshot from "@/assets/headshot-1.webp"
 import { SocialLinks } from "@/components/social-links"
 import { EducationList } from "@/components/education-list"
 import { ExperienceList } from "@/components/experience-list"
+import { ProjectList } from "@/components/project-list"
 
 function Section({
   id,
@@ -75,7 +76,7 @@ export default function Home() {
       </Section>
 
       <Section id="projects" title="Projects">
-        Add your projects here.
+        <ProjectList />
       </Section>
 
       <Section id="research" title="Research">
