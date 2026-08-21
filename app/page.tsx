@@ -5,6 +5,7 @@ import { SocialLinks } from "@/components/social-links"
 import { EducationList } from "@/components/education-list"
 import { ExperienceList } from "@/components/experience-list"
 import { ProjectList } from "@/components/project-list"
+import { ResearchList } from "@/components/research-list"
 
 function Section({
   id,
@@ -80,7 +81,7 @@ export default function Home() {
       </Section>
 
       <Section id="research" title="Research">
-        Add your research here.
+        <ResearchList />
       </Section>
     </main>
   )
