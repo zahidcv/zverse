@@ -6,6 +6,7 @@ import { EducationList } from "@/components/education-list"
 import { ExperienceList } from "@/components/experience-list"
 import { ProjectList } from "@/components/project-list"
 import { ResearchList } from "@/components/research-list"
+import { NAME, SHORT_NAME } from "@/data/profile"
 
 function Section({
   id,
@@ -40,11 +41,11 @@ export default function Home() {
       >
         <div className="flex flex-col gap-4">
           <h1 className="text-4xl font-light tracking-tight sm:text-5xl">
-            Md Zahidul Islam
+            {NAME}
           </h1>
           <p className="text-lg text-primary uppercase">Software Engineer</p>
           <p className="max-w-xl text-muted-foreground text-justify">
-            I’m Zahid, a Software Engineer currently developing software in the telecom industry, with a passion for building reliable, scalable, and meaningful digital solutions.
+            I’m {SHORT_NAME}, a Software Engineer currently developing software in the telecom industry, with a passion for building reliable, scalable, and meaningful digital solutions.
             I enjoy exploring modern technologies, solving complex problems, and continuously improving my craft, while developing a growing interest in Data Science and its applications to real-world problems.
           </p>
 
@@ -57,7 +58,7 @@ export default function Home() {
             <div className="relative size-full overflow-hidden rounded-full bg-gradient-to-b from-danger/5 to-muted ring-4 ring-primary/15 ring-offset-4 ring-offset-background">
               <Image
                 src={headshot}
-                alt="Md Zahidul Islam"
+                alt={NAME}
                 fill
                 priority
                 sizes="(min-width: 768px) 320px, 60vw"

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { NAME } from "@/data/profile";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
 
@@ -19,8 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MD Zahidul Islam",
-  description: "Portfolio of MD Zahidul Islam",
+  title: NAME,
+  description: `Portfolio of ${NAME}`,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

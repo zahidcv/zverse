@@ -18,8 +18,7 @@ import {
 import { LanguageSelect } from "@/components/language-select"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
-
-const SHORT_NAME = "Zahid"
+import { SHORT_NAME } from "@/data/profile"
 
 const NAV_ITEMS = [
   { label: "Home", href: "#top" },
