@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { LocaleProvider } from "@/components/locale-provider";
 import { NAME } from "@/data/profile";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
@@ -38,9 +39,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
-          <Footer />
+          <LocaleProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </LocaleProvider>
         </ThemeProvider>
       </body>
     </html>

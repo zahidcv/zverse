@@ -7,11 +7,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { useLocale, type Locale } from "@/components/locale-provider"
 
 const LANGUAGES = [
   { code: "en", label: "🇬🇧 English" },
   { code: "de", label: "🇩🇪 Deutsch" },
-] as const
+] as const satisfies { code: Locale; label: string }[]
 
 const SELECT_ITEMS = LANGUAGES.map(({ code, label }) => ({
   value: code,
@@ -19,8 +20,14 @@ const SELECT_ITEMS = LANGUAGES.map(({ code, label }) => ({
 }))
 
 export function LanguageSelect() {
+  const { locale, setLocale } = useLocale()
+
   return (
-    <Select defaultValue="en" items={SELECT_ITEMS}>
+    <Select
+      value={locale}
+      onValueChange={(value) => value && setLocale(value)}
+      items={SELECT_ITEMS}
+    >
       <SelectTrigger size="sm" aria-label="Select language">
         <SelectValue />
       </SelectTrigger>
