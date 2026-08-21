@@ -1,22 +1,11 @@
-import type { ComponentType, SVGProps } from "react"
-import { GraduationCapIcon, MailIcon } from "lucide-react"
-
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/social-icons"
-import { SOCIAL_LINKS, type SocialLink } from "@/data/social-links"
-
-const ICONS: Record<SocialLink["icon"], ComponentType<SVGProps<SVGSVGElement>>> = {
-  mail: MailIcon,
-  scholar: GraduationCapIcon,
-  twitter: TwitterIcon,
-  github: GithubIcon,
-  linkedin: LinkedinIcon,
-}
+import { SOCIAL_ICONS } from "@/components/social-icons"
+import { SOCIAL_LINKS } from "@/data/social-links"
 
 export function SocialLinks() {
   return (
     <div className="grid grid-cols-2 gap-3">
       {SOCIAL_LINKS.map(({ href, icon, label }) => {
-        const Icon = ICONS[icon]
+        const Icon = SOCIAL_ICONS[icon]
 
         return (
           <a
