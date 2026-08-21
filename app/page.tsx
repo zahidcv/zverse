@@ -1,5 +1,6 @@
 import Image from "next/image"
 
+import headshot from "@/assets/headshot-1.png"
 import { SocialLinks } from "@/components/social-links"
 import { EducationList } from "@/components/education-list"
 import { ExperienceList } from "@/components/experience-list"
@@ -53,8 +54,7 @@ export default function Home() {
             <div className="absolute -inset-6 -z-10 rounded-full bg-primary/10 blur-2xl" />
             <div className="relative size-full overflow-hidden rounded-full bg-muted ring-4 ring-primary/15 ring-offset-4 ring-offset-background">
               <Image
-                src="/headshot-1.png"
-                // src="/headshot-2.jpeg"
+                src={headshot}
                 alt="Md Zahidul Islam"
                 fill
                 priority
