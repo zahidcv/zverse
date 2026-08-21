@@ -24,10 +24,11 @@ export function SocialLinks() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            title={label}
+            className="inline-flex min-w-0 items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            <Icon className="size-3.5" />
-            {label}
+            <Icon className="size-3.5 shrink-0" />
+            <span className="truncate">{label}</span>
           </a>
         )
       })}
