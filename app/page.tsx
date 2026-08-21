@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import headshot from "@/assets/headshot-1.png"
+import headshot from "@/assets/headshot-1.webp"
 import { SocialLinks } from "@/components/social-links"
 import { EducationList } from "@/components/education-list"
 import { ExperienceList } from "@/components/experience-list"
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="flex justify-center md:justify-end">
           <div className="relative aspect-square w-full max-w-xs">
             <div className="absolute -inset-6 -z-10 rounded-full bg-primary/10 blur-2xl" />
-            <div className="relative size-full overflow-hidden rounded-full bg-muted ring-4 ring-primary/15 ring-offset-4 ring-offset-background">
+            <div className="relative size-full overflow-hidden rounded-full bg-gradient-to-b from-danger/5 to-muted ring-4 ring-primary/15 ring-offset-4 ring-offset-background">
               <Image
                 src={headshot}
                 alt="Md Zahidul Islam"

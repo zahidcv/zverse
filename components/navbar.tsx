@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { MenuIcon } from "lucide-react"
 
+import headshot from "@/assets/headshot-1.webp"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -59,7 +60,11 @@ export function Navbar() {
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between gap-4 px-4">
         <a href="#top" className="flex items-center gap-2 text-sm font-semibold">
           <Avatar size="sm">
-            <AvatarImage src="/headshot-1.png" alt={SHORT_NAME} />
+            <AvatarImage
+              src={headshot.src}
+              alt={SHORT_NAME}
+              className="object-[50%_20%]"
+            />
             <AvatarFallback>{SHORT_NAME.charAt(0)}</AvatarFallback>
           </Avatar>
           {SHORT_NAME}
