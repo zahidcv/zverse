@@ -1,9 +1,15 @@
+"use client"
+
 import { Fragment } from "react"
 
 import { Separator } from "@/components/ui/separator"
 import { EDUCATION } from "@/data/education"
+import { useLocale } from "@/components/locale-provider"
+import { localize } from "@/lib/i18n"
 
 export function EducationList() {
+  const { locale } = useLocale()
+
   return (
     <div className="flex flex-col gap-10">
       {EDUCATION.map((entry, index) => (
@@ -21,7 +27,9 @@ export function EducationList() {
               <span>{entry.location}</span>
             </div>
             {entry.description && (
-              <p className="mt-1 text-sm text-muted-foreground text-justify">{entry.description}</p>
+              <p className="mt-1 text-sm text-muted-foreground text-justify">
+                {localize(entry.description, locale)}
+              </p>
             )}
           </article>
         </Fragment>

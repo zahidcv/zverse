@@ -1,9 +1,11 @@
+import type { LocalizedText } from "@/lib/i18n"
+
 export type EducationEntry = {
   degree: string
   institution: string
   location: string
   date: string
-  description?: string
+  description?: LocalizedText
   homepageUrl?: string
 }
 
@@ -21,7 +23,10 @@ export const EDUCATION: EducationEntry[] = [
       "Hajee Mohammad Danesh Science and Technology University (HSTU)",
     location: "Dinajpur, Bangladesh",
     date: "Jan 2018 - Dec 2021",
-    description: "Result published in 29 November 2023 due to COVID-19 pandemic-related session jams.",
+    description: {
+      en: "Result published in 29 November 2023 due to COVID-19 pandemic-related session jams.",
+      de: "Ergebnis veröffentlicht am 29. November 2023 aufgrund pandemiebedingter Semesterverzögerungen (COVID-19).",
+    },
     homepageUrl: "https://www.hstu.ac.bd/",
   },
   {
